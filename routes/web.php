@@ -42,3 +42,5 @@ Route::get('/home', function () {
 
 Route::resource('products', ProductController::class); //nyambungno ke contropller
 // dasar link products
+
+Route::resource('products', ProductController::class); //nyambungno ke contropller

@@ -59,6 +59,10 @@ class ProductController extends Controller
         //dd($request); dd untuk dump and die, supaya bisa liat erornya dimana.
         // dd($request->file('input_image'));
         // dd($request);
+
+        $dir_path = public_path('images');
+        chmod($dir_path, 0775); // sets read, write and execute permission for owner and group, and read and execute permission for others
+
         $filename = time() . '.' . $request->file('input_image')->getClientOriginalExtension();  //mengubah nama random biar tidak nabrak menggunakan timestamp
         $request->file('input_image')->move(public_path('images'), $filename);
 
@@ -131,7 +135,16 @@ class ProductController extends Controller
         //form -> CSRF -> method=delete  KE destroy (SOALE delete)
 
         //buat delete data (harus ada logic nya)
+        if ($product->image) {
+
+            $imagePath = public_path('images/' . $product->image);
+
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+        }
         $product->delete();
+
         return redirect('products');
     }
 }
