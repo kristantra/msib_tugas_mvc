@@ -59,6 +59,34 @@
         </table>
     </div>
     
-    <a href="{{ url('products/create') }}" class="btn btn-primary">Create</a>
+    <div class="container d-flex justify-content-center mt-3">
+        <a href="{{ url('products/create') }}" class="btn btn-primary btn-lg">Create</a>
+      </div>
+    <div class="container my-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Instructions</h5>
+            <ol>
+              <li>This website is only for practicing the CRUD feature</li>
+              <li>This website also remove uploaded image from public folder. </li>
+              <li>Hope you're having fun on this project too!</li>
+            </ol
+          </div>
+        </div>
+      </div>
+      
+    <div class="container my-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Credit</h5>
+            <p class="card-text">This website was created by Dwi Krisna Tantra, a student of Petra Christian University.</p>
+            <p class="card-text"> (universitas kristen petra)</p>
+          </div>
+          <div class="card-footer text-muted">
+            © 2023 Petra Christian University. All rights reserved.
+          </div>
+        </div>
+      </div>
+      
 </body>
 </html>

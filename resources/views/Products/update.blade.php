@@ -20,7 +20,7 @@
         <button type="submit">SUB MIT</button>
     </form>
 
-    
+    <a href="{{ url('products') }}">Go back</a>
 </body>
 
 </html>

@@ -14,6 +14,7 @@
     <p>{{ $product->product_name }} </p>
     <p>{{ $product->price }} </p>
     
+    <a href="{{ url('products') }}">Go back</a>
 </body>
 
 </html>
